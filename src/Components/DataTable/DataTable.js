@@ -37,14 +37,16 @@ function DataTable() {
           variant='link' 
           onClick={() => {
           setEmpId(item.id)
-          setShowUser(!showUser)
+          setShowUser(true)
+          setShowPosts(false)
           }} 
           className="row-ctas">View Profile</Button></Col>
         <Col><Button 
         variant='link' 
         onClick={() => {
           setEmpId(item.id)
-          setShowPosts(!showPosts);
+          setShowPosts(true);
+          setShowUser(false)
           }} 
           className="row-ctas">View Post</Button></Col>          
          </Row>

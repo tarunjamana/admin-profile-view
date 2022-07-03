@@ -11,8 +11,14 @@ function SideMenu() {
     <Offcanvas show={true} placement="end" scroll={true} backdrop={false} className="side-menu">
     <Offcanvas.Body>
       <div className='side-btn'>
-      <Button disabled={btnState} variant='link' onClick={() => setShowUser(!showUser)}  className="side__ctas">Profile</Button>
-      <Button disabled={btnState}  variant='link' onClick={() => setShowPosts(!showPosts)}  className="side__ctas">Posts</Button>
+      <Button disabled={btnState} variant='link' onClick={() => {
+                setShowUser(true)
+                setShowPosts(false)
+      }}  className="side__ctas">Profile</Button>
+      <Button disabled={btnState}  variant='link' onClick={() => {
+                setShowUser(false)
+                setShowPosts(true)
+      }}  className="side__ctas">Posts</Button>
       </div>
     </Offcanvas.Body>
    
