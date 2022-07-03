@@ -22,7 +22,6 @@ const useFetch = (url) => {
           }
         })();
       }, [url]);
-      console.log(data);
       return {data ,dataLoaded}
 };
 export default useFetch;

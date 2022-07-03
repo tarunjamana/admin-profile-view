@@ -4,7 +4,6 @@ import {Card,Form} from 'react-bootstrap';
 import {getAddress} from '../../HelperFuncs/getAddress';
 
 function UserProfileCard({data,initials}) {
-    console.log(data,initials);
     let address = getAddress(data?.[0])
   return (
     <Card style={{ width: 'S' }} className="posts-card">

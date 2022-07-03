@@ -6,6 +6,21 @@ import './datatable.scss';
 
 function DataTable() {
     const {data ,dataLoaded,setEmpId,showUser,setShowUser,showPosts,setShowPosts}= SavedData();
+  
+    const [value,setValue] = useState('');
+  
+   const transformedData = () =>{
+     let filteredData = data 
+     if(value && data){
+       filteredData = filteredData.filter((data) => {
+        return   data.name.toLowerCase().includes(value);
+       })
+     }
+     return filteredData
+   }
+    function handleChange(e){
+      setValue(e.target.value);
+    }
     if(!dataLoaded) return (
       <div>
         <h1>Loading Please Wait...</h1>
@@ -13,7 +28,7 @@ function DataTable() {
     )
   return (
     <>
-    <Header />
+    <Header value={value} handleChange={handleChange} />
   
      <Container>
       <Row className='column-headers'>
@@ -25,7 +40,7 @@ function DataTable() {
         <Col></Col>
         <Col></Col>
       </Row>
-      {data && data.map((item) =>{
+      {transformedData().map((item) =>{
         return (
            <Row key={item.id} className="data-columns">
         <Col>{item.name}</Col>

@@ -11,7 +11,6 @@ function UserProfile() {
     const {empId,showUser,setShowUser} = SavedData();
     const {data,dataLoaded} = useFetch(`https://jsonplaceholder.typicode.com/users/${empId}`);
     const initials = getInitials(data?.[0]);
-    console.log(data,initials);
   return (
     <Offcanvas show={showUser} placement="end" scroll={false} backdrop={false} className="posts-section">
     <Offcanvas.Header closeButton onHide={() => setShowUser(!showUser)}>
