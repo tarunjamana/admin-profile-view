@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import CustomIframe from './Components/CustomIframe';
+import DataTable from './Components/DataTable/DataTable';
+import SideMenu from './Components/SideMenu/SideMenu';
+import TestComponent from './Components/TestComponent';
+import Posts from './Components/Posts/Posts';
+import React from 'react';
+import UserProfile from './Components/UserProfile/UserProfile';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <div className='heading'>DataTable</div>
+      <div className='iframe-container'>
+      <CustomIframe className="data-table-container" title="custom iframe" width="100%" height="700px" >
+        <DataTable />
+      </CustomIframe>
+      </div>
+      <React.StrictMode>
+      <Posts />
+      <UserProfile />
+      </React.StrictMode>
+      <SideMenu />
     </div>
+  // <TestComponent />
   );
 }
 

@@ -1,0 +1,30 @@
+:root{
+  background-color: #ccc;
+}
+
+.App{
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: relative;
+
+}
+.iframe-container{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+padding: 200px;
+padding-top: 0;
+top: 100px;
+}
+
+.heading{
+  position: absolute;
+  top: 17px;
+  left: 210px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 42px;
+}

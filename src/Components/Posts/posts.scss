@@ -1,0 +1,15 @@
+.Avatar-section{
+    display: flex;
+    margin-bottom: 20px !important;
+    align-items: center;
+   .Avatar{
+    border: 2px solid #eee;
+    padding: 12px 18px;
+    margin-right: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+   }
+   p{
+    margin-bottom: 0 !important;
+   }
+}

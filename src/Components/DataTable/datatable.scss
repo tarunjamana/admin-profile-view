@@ -1,0 +1,33 @@
+.data-table-container{
+display: block;
+border: 2px solid #ccc;
+border-radius: 6px;
+width: 100%;
+}
+
+.column-headers{
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    padding: 20px 0;
+    .col,.col-4{
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 700;
+    }
+}
+
+.data-columns{
+    border-bottom: 2px solid #eee;
+    padding: 20px 0;
+    .col,.col-4{
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+}
+
+.row-ctas{
+    text-decoration: none !important;
+    padding: 0 12px !important;
+    font-weight: 700 !important;
+}
