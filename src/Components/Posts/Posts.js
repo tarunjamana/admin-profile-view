@@ -16,6 +16,7 @@ function Posts() {
     // console.log(user?.[0])
     // const fullName = user?.[0].name.split('')
     // const initials = fullName?.shift().charAt(0) + fullName?.pop().charAt(0);
+    if(!data) return;
 
   return (
     <Offcanvas show={showPosts} placement="end" scroll={true} backdrop={false} className="posts-section">
