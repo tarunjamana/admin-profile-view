@@ -9,8 +9,8 @@ import {getInitials} from '../../HelperFuncs/getInitials'
 function Posts() {
 
     const {empId,showPosts,setShowPosts}= SavedData();
-    const {data,dataLoaded} =useFetch(`https://jsonplaceholder.typicode.com/users/${empId}/posts`);
-    const {data:user,dataloaded:userLoaded} = useFetch(`https://jsonplaceholder.typicode.com/users/${empId}`);
+    const {data,dataLoaded} =useFetch(`https://jsonplaceholder.typicode.com/users/${empId}/posts`,empId,"posts");
+    const {data:user,dataloaded:userLoaded} = useFetch(`https://jsonplaceholder.typicode.com/users/${empId}`,empId,"user");
     const initials = getInitials(user?.[0]);
      
     // console.log(user?.[0])

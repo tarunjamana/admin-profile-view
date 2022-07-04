@@ -9,7 +9,7 @@ import {Offcanvas} from 'react-bootstrap';
 
 function UserProfile() {
     const {empId,showUser,setShowUser} = SavedData();
-    const {data,dataLoaded} = useFetch(`https://jsonplaceholder.typicode.com/users/${empId}`);
+    const {data,dataLoaded} = useFetch(`https://jsonplaceholder.typicode.com/users/${empId}`,empId,"user");
     const initials = getInitials(data?.[0]);
   return (
     <Offcanvas show={showUser} placement="end" scroll={false} backdrop={false} className="posts-section">
