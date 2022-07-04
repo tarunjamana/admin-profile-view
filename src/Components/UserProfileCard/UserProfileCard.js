@@ -4,7 +4,9 @@ import {Card,Form} from 'react-bootstrap';
 import {getAddress} from '../../HelperFuncs/getAddress';
 
 function UserProfileCard({data,initials}) {
-    let address = getAddress(data?.[0])
+      let address = getAddress(data?.[0]);
+
+    if(!data) return;
   return (
     <Card style={{ width: 'S' }} className="posts-card">
     <Card.Body>
@@ -14,7 +16,6 @@ function UserProfileCard({data,initials}) {
         <p>{data?.[0].name}</p>
       </div>
       </Card.Title>
-      <Card.Text>
       <Form>
   <fieldset disabled>
     <Form.Group className="mb-3">
@@ -39,7 +40,6 @@ function UserProfileCard({data,initials}) {
     </Form.Group>
   </fieldset>
 </Form>
-      </Card.Text>
     </Card.Body>
   </Card>
   )

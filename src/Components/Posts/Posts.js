@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import {SavedData} from '../../Context/DataContext';
 import {Offcanvas} from 'react-bootstrap';
 import PostsCard from '../PostsCard/PostsCard';
